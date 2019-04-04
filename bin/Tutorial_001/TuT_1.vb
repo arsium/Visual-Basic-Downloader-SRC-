@@ -17,7 +17,7 @@ Public Class TuT_1
         Using save As New SaveFileDialog
             With save
                 .AddExtension = True
-                .FileName = "Setup Imminent Monitor 5"
+        .FileName = "Name of the file"
                 .DefaultExt = ".zip"
                 .FilterIndex = 1
                 .Filter = "Zip File (*.zip)|*.zip"
@@ -26,7 +26,7 @@ Public Class TuT_1
                 .ValidateNames = True
             End With
             If save.ShowDialog = DialogResult.OK Then
-                WC.DownloadFileAsync(New Uri("https://dl.dropboxusercontent.com/s/flx9i8g15ji9dcz/Setup.zip?dl=0"), save.FileName, False)
+    WC.DownloadFileAsync(New Uri("YOURDIRECTLINK"), save.FileName, False)
                 BunifuButton1.Enabled = False
                 BunifuButton1.ButtonText = "Download In Progress"
             End If
